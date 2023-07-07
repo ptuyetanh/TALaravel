@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manager User</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css"
+        integrity="sha512-SgaqKKxJDQ/tAUAAXzvxZz33rmn7leYDYfBP+YoMRSENhf3zJyx3SBASt/OfeQwBHA1nxMis7mM3EV/oYT6Fdw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/solid.min.css"
+        integrity="sha512-yDUXOUWwbHH4ggxueDnC5vJv4tmfySpVdIcN1LksGZi8W8EVZv4uKGrQc0pVf66zS7LDhFJM7Zdeow1sw1/8Jw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://code.jquery.com/jquery-3.7.0.js"
+        integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <script src="./js/jquery.js"></script>
+</head>
+
+<body>
+    <div class="sidebar">
+        <nav class="navbar navbar-expand-sm  navbar-fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="#">Admin</a>
+                <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+                    aria-label="Toggle navigation"></button>
+                <div class="collapse navbar-collapse" id="collapsibleNavId">
+                    <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="managerUser.html" aria-current="page"><i
+                                    class="fa-solid fa-plus"></i>Manager Users<span
+                                    class="visually-hidden">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="managerCourse.html"><i class="fa-solid fa-plus"></i>Manager Courses</a>
+                        </li>
+                        <li class="nav-item logOut">
+                            <a class="nav-link" href="login.html"><i class="fa-solid fa-right-from-bracket"></i>LogOut</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- end sidebar -->
+    <div class="managerUser">
+        <div class="tittleUser">
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h2>Quản lý người dùng</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end tittle -->
+        <div class="addUser">
+            <div class="container">
+                <!-- Modal trigger button -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalAdd">
+                    Thêm
+                </button>
+                <!-- Modal Body -->
+                <!-- if you want to close by clicking outside the modal, delete the last endpoint:data-bs-backdrop and data-bs-keyboard -->
+                <div class="modal fade" id="modalAdd" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false"
+                    role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog modal-dialog-centered " role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalTitleId">Thêm mới</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="form">
+                                    <form class="row g-3 needs-validation" validate>
+                                        <div class="col-md-4">
+                                            <label for="validationCustom01" class="form-label">Họ Tên</label>
+                                            <input type="text" class="form-control" id="validationCustom01" value="Mark"
+                                                required>
+                                            <div class="valid-feedback">
+                                                Looks good!
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label for="validationCustom02" class="form-label">Email</label>
+                                            <input type="text" class="form-control" id="validationCustom02" value="Otto"
+                                                required>
+                                            <div class="valid-feedback">
+                                                Looks good!
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label for="validationCustomUsername" class="form-label">Ngày sinh</label>
+                                            <div class="input-group">
+                                                <input type="date" class="form-control"
+                                                    aria-describedby="inputGroupPrepend" required>
+                                                <div class="invalid-feedback">
+                                                    Please choose a date.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="validationCustom03" class="form-label">Số điện thoại</label>
+                                            <input type="text" class="form-control" id="validationCustom03" required>
+                                            <div class="invalid-feedback">
+                                                Please provide a phone.
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="validationCustom05" class="form-label">Danh sách khóa
+                                                học</label>
+                                                <textarea class="form-control" id="validationCustom05" required></textarea>
+                                            <div class="invalid-feedback">
+                                                Please provide a valid zip.
+                                            </div>
+                                        </div>
+                                        <div class="col-md-9">
+                                            <label for="validationCustom04" class="form-label">Ảnh đại diện</label>
+                                            <input type="file" class="form-control" name="" id="validationCustom04" required>
+                                            <div class="invalid-feedback">
+                                                Please select a valid state.
+                                            </div>
+                                        </div>
+                                        <div class="col-12 modal-footer">
+                                            <button type="button" class="btn btn-secondary"
+                                                data-bs-dismiss="modal">Close</button>
+                                            <button class="btn btn-primary" type="submit">Update</button>
+                                        </div>
+                                    </form>
+                                </div>
+                                <!-- end form  -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end addUser -->
+        <div class="contentUser">
+            <div class="container">
+                <div class="row">
+                    <div class="table-responsive">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr class="text-center">
+                                    <th class="col-2" scope="col">Họ tên</th>
+                                    <th class="col-2" scope="col">Email</th>
+                                    <th class="col-2" scope="col">Ngày sinh</th>
+                                    <th class="col-2" scope="col">Số điện thoại</th>
+                                    <th class="col-1" scope="col">Ảnh đại diện</th>
+                                    <th class="col-2" scope="col">Danh sách khóa học</th>
+                                    <th class="col-1" scope="col">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="">
+                                    <td scope="row">R1C1</td>
+                                    <td>R1C2</td>
+                                    <td>R1C3</td>
+                                    <td>R1C1</td>
+                                    <td><img src="./img/IMG_0247.JPG" class="img-fluid rounded" alt=""
+                                            style="height:90px;width:90px"></td>
+                                    <td>R1C3</td>
+                                    <td class="action">
+                                        <div class="update">
+                                            <!-- Modal trigger button -->
+                                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                                data-bs-target="#modalUpdate">
+                                                <i class="fa-solid fa-pen-to-square"></i>
+                                            </button>
+
+                                            <!-- Modal Body -->
+                                            <!-- if you want to close by clicking outside the modal, delete the last endpoint:data-bs-backdrop and data-bs-keyboard -->
+                                            <div class="modal fade" id="modalUpdate" tabindex="-1"
+                                                data-bs-backdrop="static" data-bs-keyboard="false" role="dialog"
+                                                aria-labelledby="modalTitleId" aria-hidden="true">
+                                                <div class="modal-dialog modal-dialog modal-dialog-centered "
+                                                    role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="modalTitleId">Chỉnh sửa</h5>
+                                                            <button type="button" class="btn-close"
+                                                                data-bs-dismiss="modal" aria-label="Close"></button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <div class="form">
+                                                                <form class="row g-3 needs-validation" validate>
+                                                                    <div class="col-md-4">
+                                                                        <label for="validationCustom01"
+                                                                            class="form-label">Họ Tên</label>
+                                                                        <input type="text" class="form-control"
+                                                                            id="validationCustom01" value="Mark"
+                                                                            required>
+                                                                        <div class="valid-feedback">
+                                                                            Looks good!
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-4">
+                                                                        <label for="validationCustom02"
+                                                                            class="form-label">Email</label>
+                                                                        <input type="text" class="form-control"
+                                                                            id="validationCustom02" value="Otto"
+                                                                            required>
+                                                                        <div class="valid-feedback">
+                                                                            Looks good!
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-4">
+                                                                        <label for="validationCustomUsername"
+                                                                            class="form-label">Ngày sinh</label>
+                                                                        <div class="input-group">
+                                                                            <input type="date" class="form-control"
+                                                                                aria-describedby="inputGroupPrepend"
+                                                                                required>
+                                                                            <div class="invalid-feedback">
+                                                                                Please choose a date.
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-6">
+                                                                        <label for="validationCustom03"
+                                                                            class="form-label">Số điện thoại</label>
+                                                                        <input type="text" class="form-control"
+                                                                            id="validationCustom03" required>
+                                                                        <div class="invalid-feedback">
+                                                                            Please provide a phone.
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-6">
+                                                                        <label for="validationCustom05"
+                                                                            class="form-label">Danh sách khóa
+                                                                            học</label>
+                                                                            <textarea class="form-control" id="validationCustom05" required></textarea>
+                                                                        <div class="invalid-feedback">
+                                                                            Please provide a valid zip.
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-9">
+                                                                        <label for="validationCustom04" class="form-label">Ảnh đại diện</label>
+                                                                        <input type="file" class="form-control" name="" id="validationCustom04" required>
+                                                                        <div class="invalid-feedback">
+                                                                            Please select a valid state.
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-12 modal-footer">
+                                                                        <button type="button" class="btn btn-secondary"
+                                                                            data-bs-dismiss="modal">Close</button>
+                                                                        <button class="btn btn-primary"
+                                                                            type="submit">Update</button>
+                                                                    </div>
+                                                                </form>
+                                                            </div>
+                                                            <!-- end form  -->
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- end upadte  -->
+                                        <div class="delete">
+                                            <!-- Modal trigger button -->
+                                            <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal"
+                                                data-bs-target="#modalDelete">
+                                                <i class="fa-solid fa-delete-left"></i>
+                                            </button>
+
+                                            <!-- Modal Body -->
+                                            <!-- if you want to close by clicking outside the modal, delete the last endpoint:data-bs-backdrop and data-bs-keyboard -->
+                                            <div class="modal fade" id="modalDelete" tabindex="-1"
+                                                data-bs-backdrop="static" data-bs-keyboard="false" role="dialog"
+                                                aria-labelledby="modalTitleId" aria-hidden="true">
+                                                <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm"
+                                                    role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="modalTitleId">Xóa người dùng
+                                                            </h5>
+                                                            <button type="button" class="btn-close"
+                                                                data-bs-dismiss="modal" aria-label="Close"></button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            Bạn có muốn xóa không?
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary"
+                                                                data-bs-dismiss="modal">Close</button>
+                                                            <button type="button"
+                                                                class="btn btn-primary">Delete</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- end delete -->
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end contentUser -->
+        <div class="navigation">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-5 offset-sm-5">
+                        <nav aria-label="Page navigation example ">
+                            <ul class="pagination pagination-sm">
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Previous">
+                                        <span aria-hidden="true">Previous</span>
+                                    </a>
+                                </li>
+                                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Next">
+                                        <span aria-hidden="true">Next</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end navigation -->
+    </div>
+    <!-- end managerUser -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>

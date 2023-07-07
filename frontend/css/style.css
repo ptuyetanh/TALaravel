@@ -1,0 +1,137 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.deleteCourse button.btn.btn-primary.btn-lg {
+    background-color: red;
+}
+
+.managerCourse td.actionCourse button.btn.btn-primary.btn-lg {margin-left: 3px;padding: 4px 10px;}
+
+.managerCourse td.actionCourse {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.managerCourse button.btn.btn-primary.btn-lg {
+    padding: 5px 14px;
+    font-size: 20px;
+    border: none;
+}
+
+.addcourse {
+    margin: 12px 0px;
+}
+
+.managerCourse h2 {
+    font-size: 40px;
+    font-weight: 200;
+    font-family: initial;
+}
+
+.managerCourse {
+    width: 100%;
+    height: 758px;
+    padding-top: 50px;
+    background-color: #0086b10f;
+}
+
+.addUser button.btn.btn-primary {
+    margin-bottom: 3px;
+}
+
+td.action .update {
+    padding: 0px 7px;
+}
+
+td.action {
+    display: flex;
+    padding: 34px 0px;
+}
+
+.delete button.btn.btn-primary.btn-lg {
+    padding: 3px 9px;
+    background-color: #ff0000db;
+    border: none;
+}
+
+.managerUser .tittleUser {
+    margin-bottom: 29px;
+}
+
+.managerUser .tittleUser h2 {
+    font-size: 40px;
+    font-weight: 200;
+    font-family: initial;
+}
+
+.managerUser {
+    margin-bottom: 45px;
+}
+
+.managerUser {
+    padding-top: 64px;
+    background-color: #0086b10a;
+    width: 100%;
+    height: 757px;
+}
+
+i.fa-solid.fa-plus {
+    margin-right: 7px;
+}
+
+li.nav-item {
+    margin-right: 25px;
+}
+
+li.nav-item.logOut {
+    margin-left: 56px;
+}
+
+.sidebar li.nav-item a.nav-link {
+    color: white;
+    font-size: 18px;
+}
+
+.sidebar a.navbar-brand {
+    color: white;
+    font-size: 24px;
+}
+
+
+.sidebar {
+    background-color: #0086B1;
+}
+
+button.btn.btn-primary:hover {
+    background-color: #0000ff;
+}
+
+.login button.btn.btn-primary {
+    background-color: #0000ff73;
+    margin: auto;display: block;
+    padding: 9px 36px;
+    border: none;
+    margin-top: 13px;
+    font-weight: 200;
+    font-family: cursive;
+}
+
+.tittle h2 {
+    font-size: 33px;
+    font-weight: 200;
+    font-family: cursive;
+}
+
+.tittle {padding-top: 220px;}
+
+.login {
+    width: 100%;
+    background-image: url(/img/bg.jpg);
+    height: 757px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
